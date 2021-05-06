@@ -1,0 +1,38 @@
+@charset "utf-8";
+/*テーブル*/
+table.table_setting{
+	width:100%; /*テーブル全体の幅*/
+	border-collapse:collapse; /*セル同士の間に隙間を空けない*/
+}
+table.table_setting th{
+	width:20%; /*見出しセルの幅*/
+	padding:10px; /*パディング*/
+	text-align:center; /*センター揃えにする*/
+	white-space:nowrap; /*セル内の改行を禁止*/
+	background-color:#ccccee; /*セルの背景色*/
+	border-bottom:dotted #666666 1px; /*セルのボーダー*/
+}
+table.table_setting td{
+	padding:10px;
+	background-color:#eeeeff;
+	border-bottom:dotted #666666 1px;
+}
+
+/*テーブル２*/
+table.table_setting2{
+	width:90%; /*テーブル全体の幅*/
+	border-collapse:collapse; /*セル同士の間に隙間を空けない*/
+}
+table.table_setting2 th{
+	width:30%; /*見出しセルの幅*/
+	padding:0px; /*パディング*/
+	text-align:center; /*センター揃えにする*/
+	white-space:nowrap; /*セル内の改行を禁止*/
+	background-color:#ccccee; /*セルの背景色*/
+	border-bottom:dotted #666666 1px; /*セルのボーダー*/
+}
+table.table_setting2 td{
+	padding:10px;
+	background-color:#eeeeff;
+	border-bottom:dotted #666666 1px;
+}

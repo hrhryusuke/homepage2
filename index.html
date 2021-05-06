@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--CSSファイルの参照元設定-->
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="table.css">
+<!--ページタブに表示されるタイトル-->
+<title>Hirao's website</title>
+
+<!--画像スライドショー-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    var setImg = '#photo';
+    var fadeSpeed = 1600;
+    var switchDelay = 5000;
+
+    $(setImg).children('img').css({opacity:'0'});
+    $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
+
+    setInterval(function(){
+        $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+    },switchDelay);
+});
+</script>
+</head>
+
+<body>
+<div id="pagebody">
+	<!--ヘッダ-->
+	<div id="header">
+	<h1><a href="index.html"><img src="images/logo.png" alt="Hirao's website"></a></h1>
+	</div>
+
+	<!--メインメニュー-->
+	<ul id="menu">
+	<li><a href="index.html">ホーム</a></li>
+	<li><a href="profile.html">プロフィール</a></li>
+	<li><a href="research.html">研究内容</a></li>
+	<li><a href="links.html">関連リンク</a></li>
+	<li><a href="inquiry.html">お問い合わせ</a></li>
+	</ul>
+
+	<!--ヘッダ画像-->
+	<div id="photo">
+		<img src="./images/img_index.png" alt="">
+		<img src="./images/img_profile.png" alt="">
+		<img src="./images/img_inquiry.png" alt="">
+	</div>
+	
+	<!--<div id="img_index">
+	<img src="./images/img_index.png" alt="ようこそ！平尾友佑のホームページへ！" class="delayed-image">
+	</div>-->
+	
+	<!--サブメニュー-（左カラム）-->
+	<div id="submenu">
+	<h2>新着情報</h2>
+	<ul>
+		<li><a href="#info0001">研究について</a></li>
+		<li><a href="#info0002">イベント・更新情報</a></li>
+	</ul>
+	</div>
+	
+	<!--インフォメーション（右カラム）-->
+	<div id="info">
+	<h3 id="info0001">研究について</h3>
+		<p>
+		<img src="images/computer_neochi.png" alt="寝落ちのイメージ画像" class="infoimg_index">
+		<marquee height="200" width="200" behavior="alternate" direction="up" scrollamount="5" truespeed>
+			進捗ダメです。<br>
+			今後にご期待ください。
+		</marquee>
+		</p>
+	<h3 id="info0002">イベント・更新情報</h3>
+		<table class="table_setting">
+		<tr>
+			<th>2021/4/19</th>
+			<td>ホームページの骨組みだけ完成しました。</td>
+		</tr>
+		<tr>
+			<th>2021/4/16</th>
+			<td>ホームページの作成を開始しました。</td>
+		</tr>
+		</table>
+	<hr>
+	</div>
+
+	<!--フッタ-->
+	<div id="footer">
+	<small>Copyright &copy; Hirao's website All rights Reserved.</small>
+	</div>
+
+</div>
+</body>
+</html>
